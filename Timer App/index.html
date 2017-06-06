@@ -1,0 +1,57 @@
+<!DOCTYPE=html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CP Timer App</title>
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="model.js"></script>
+        <script type="text/javascript" src="view.js"></script>
+        <script type="text/javascript"> window.onload = getCurrentDate</script>
+    </head>
+    <body>
+        <div id="main">
+            <table>
+                <tr>
+                    <td style="width:70%; left:0px">Name <input type="text" id="nameField" value="Your Name" disabled="true"></td>
+                    <td style="width:20%; text-align:left"><input type="button" value="Edit" id="changeName" onclick="changeName();"> <input id="saveName" type="button" value="Save Name" onclick="saveName();" style="display:none"></td>
+                    <td id="currentDate"></td>
+                </tr>
+            </table>
+            <table style="width:100%">
+                <tr style="width:100%">
+                    <td style="left:0%; width:10%">Jobs</td>
+                    <td style="left:10%"><input id="newJob" type="button" value="+New" onclick="addNewJob();"></td>
+                </tr>
+                <tr style="width:100%; display:none" id="newJobRowOne">
+                    <td>New Job Name</td>
+                    <td>Time Already Worked in Hours (2.5 for 2 hours 30 minutes)</td>
+                </tr>
+                <tr style="width:100%; display:none" id="newJobRowTwo">
+                    <td><input type=text id="newJobName" value="New Job"></td>
+                    <td><input type=text id="timeAlreadyWorked" value="Time Already Worked in Hours"></td>
+                    <td><input type="button" id="submitNewJob" value="Create Job" onclick="createJob();"></td>
+                </tr>
+            </table>
+            <table id="jobList">
+                <th>Active</th>
+                <th>Recent</th>
+                <tr>
+                    <td><table id="activeJobTable">
+                        <tr>
+                            <td id="activeJobName">CP Professional Services</td>
+                            <td><input type="button" id="editActiveJob" value="Edit" onclick="editActiveJob();"></td>
+                            <td><input type="button" id="startButton" value="Start" onclick="startTimer();"></td>
+                            <td><input type="button" id="stopButton" disabled = true; value="Stop" onclick="stopTimer();"></td>
+                        </tr>
+                        </table>
+                        <table>
+                        <tr id="timer">
+                            <td id="timerHour">00:</td><td id="timerMinute">00:</td><td id="timerSecond">00</td>
+                        </tr>
+                        </table></td>
+                    <td><table id="recentJobs"></table></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

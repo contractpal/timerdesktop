@@ -1,0 +1,18 @@
+#main{
+    width: 100%;
+}
+#currentDate{
+    right:0px;
+    text-align: right;
+    width: 10%;
+}
+#jobList{
+    width:100%;
+    text-align:left;
+}
+
+#timerHour, #timerMinute, #timerSecond, #timer{
+    padding: 0,0,0,0;
+    margin: 0,0,0,0;
+    border: 0,0,0,0;
+}
